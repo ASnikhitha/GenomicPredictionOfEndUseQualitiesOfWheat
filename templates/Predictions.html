@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment-Based Model Prediction</title>
+    <!-- Add your CSS stylesheets and other head elements here -->
+</head>
+<body>
+    <h1>Environment-Based Model Prediction</h1>
+    <form id="predictionForm">
+        <label for="sequence">Enter Sequence:</label>
+        <input type="text" id="sequence" required>
+
+        <label for="environment">Select Environment:</label>
+        <select id="environment" name="environment">
+            <option value="Karnal">Karnal</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Ludhiana">Ludhiana</option>
+            <option value="Dharwad">Dharwad</option>
+            <option value="Pooled">Pooled</option>
+            <option value="Jharkhand">Jharkhand</option>
+        </select>
+
+        <button type="button" onclick="predict()">Predict</button>
+    </form>
+    <h2>Predictions:</h2>
+    <div id="predictions"></div>
+
+    <script>
+        function predict() {
+            // Get the sequence input value and selected environment
+            var sequence = document.getElementById("sequence").value;
+            var environment = document.getElementById("environment").value;
+
+            // Send the sequence and environment to the server for prediction
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ sequence: sequence, environment: environment }),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Display predictions on the webpage
+                    var predictionsDiv = document.getElementById("predictions");
+                    predictionsDiv.innerHTML = "";
+                    for (var key in data) {
+                        predictionsDiv.innerHTML += `<p>${key}: ${data[key]}</p>`;
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

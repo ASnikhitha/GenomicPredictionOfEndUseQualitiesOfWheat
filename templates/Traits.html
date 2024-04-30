@@ -1,0 +1,130 @@
+
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/Styles.css">
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/popper.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <script src="/static/Script.js"></script>
+    <title>Genomic Prediction for End-Use Quality Traits in Wheat</title>
+    <style>
+        html{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height:100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            box-sizing: inherit;
+            /* overflow-y: hidden;  */
+        }
+        .container-fluid, .row {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        footer {
+            background-color: #333; /* Dark background color for the footer */
+            color: #fff; /* Text color for the footer */
+            padding: 0.5em; /* Add padding to the footer */
+            bottom: 0;
+            padding-bottom: 0.25em;
+            text-align: center; /* Center-align the content within the footer */
+            position: static;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height: 0vh;
+            margin-top: 250px;
+        }
+        li
+        {
+            font-size: 1.15em;
+            color: #030300;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="con">
+            <img src="/static/logo.png" alt="Logo" class="logo">
+            <h2 class="fir">Wheat End-Use Quality Trait Predictor</h2>
+        </div>
+        <div class="row opt">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('traits') }}">End-Use Quality Traits</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index') }}">Predictions</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('sources') }}">Sources</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}#ContactUs">Contact Us</a>
+            </li>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="jumbotron text-align" style="padding: 50px;padding-bottom: 30px;padding-top: 30px;">
+                    <h2 style="margin-bottom: 20px;">End-Use Quality Traits:</h2>
+                    <p>End-use quality traits encompass characteristics that influence the suitability of wheat for consumption and industrial processing. Achieving excellence in these traits is imperative for producing wheat varieties that meet the diverse demands of consumers and industry standards.</p>
+                    <p>Some of the End-use quality traits are : </p>
+                    <p>
+                        <li>
+                            <b>Days to Heading (DH) :</b> This trait represents the time taken by the wheat plants to initiate the reproductive phase, specifically the formation of flower heads or spikes. Early or timely heading can be critical in avoiding exposure to adverse weather conditions during the grain-filling stage.
+                        </li>
+                    </p>
+                    <p>
+                        <li>
+                            <b>Grain Filling Duration (GFD) :</b> GFD is the period between flowering and physiological maturity when grains accumulate starch and nutrients. Optimizing the grain-filling duration is essential for achieving maximum grain weight and ensuring good yield potential.
+                        </li>
+                    </p>
+                    <p> 
+                        <li>
+                            <b>Grain Number per Spike (GNPS) :</b> The number of grains per spike is a key determinant of overall grain yield. Varieties with higher grain numbers per spike have the potential to produce more grains, contributing to increased yield.
+                        </li>
+                    </p>
+                    <p>
+                        <li>
+                            <b>Grain Weight per Spike (GWPS) :</b> Grain weight per spike is a measure of individual grain size and weight. This trait influences the overall yield and is crucial for determining the market value of wheat grains.
+                        </li>
+                    </p>
+                    <p>
+                        <li>
+                            <b>Plant Height (PH) :</b> Plant height is an important agronomic trait that affects the crop's lodging resistance, ease of harvesting, and resource utilization. Balancing plant height is essential for achieving optimal yield and standability.
+                        </li>
+                    </p>
+                    <p>
+                        <li>
+                            <b>Grain Yield (GY) :</b> Grain yield is the ultimate goal of wheat cultivation and is influenced by a combination of various traits, including those mentioned above. Breeding for high-yielding varieties is a continuous effort to meet the increasing demand for wheat.
+                        </li>
+                    </p>
+                    <a class="nav-link" href="{{ url_for('index') }}" style="margin-left: 0;"><p style="color: blue;">Click to predict values of End-Use Quality Traits of Wheat. --> </p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="para">&copy; 2024 Genomic Prediction for End-Use Quality Traits in Wheat. All rights reserved.</p>
+    </footer>
+</body>
+</html>

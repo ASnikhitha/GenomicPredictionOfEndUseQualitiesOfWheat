@@ -1,0 +1,136 @@
+
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/Styles.css">
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/popper.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <script src="/static/Script.js"></script>
+    <title>Genomic Prediction for End-Use Quality Traits in Wheat</title>
+    <style>
+        html{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height:100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            box-sizing: inherit;
+            /* overflow-y: hidden;  */
+        }
+        .container-fluid, .row {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        footer {
+            background-color: #333; /* Dark background color for the footer */
+            color: #fff; /* Text color for the footer */
+            padding: 0.5em; /* Add padding to the footer */
+            bottom: 0;
+            padding-bottom: 0.25em;
+            text-align: center; /* Center-align the content within the footer */
+            position: static;
+            width: 100%;
+            min-height: 0vh;
+            margin-top: 420px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="con">
+            <img src="/static/logo.png" alt="Logo" class="logo">
+            <h2 class="fir">Wheat End-Use Quality Trait Predictor</h2>
+        </div>
+        <div class="row opt">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('traits') }}">End-Use Quality Traits</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index') }}">Predictions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('sources') }}">Sources</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}#ContactUs">Contact Us</a>
+            </li>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="jumbotron text-align" style="margin-top: 2.25%;">
+                    <h2 style="margin-bottom: 25px;">Datasets used : </h2>
+                    <li style="margin-bottom: 20px;">
+                        <a href="/static/Genotypic_Data.csv" style="margin-left: 0;font-size: 1.15em;">Genotypic_Data.csv</a>
+                    </li>
+                    <li style="margin-bottom: 20px;">
+                        <a href="/static/Phenotypic_Data.csv" style="margin-left: 0;font-size: 1.15em;">Phenotypic_Data.csv</a>
+                    </li>
+                    <li style="margin-bottom: 20px;">
+                        <a href="/static/README_Genotype_PhenotypeFile_Information.txt" style="margin-left: 0;font-size: 1.15em;">MetaData of above two Datasets</a>
+                    </li>
+                </div>
+                <div class="jumbotron text-align" style="margin-top: 2.25%;">
+                    <h2 style="margin-bottom: 25px;">References : </h2>
+                    <li style="margin-bottom: 20px;">
+                        <a href="/static/Base-paper.pdf" style="margin-left: 0;font-size: 1.15em;">Base Paper </a>
+                        <span style="font-size: 1.15em;">: Multi-Trait Multi-Environment Genomic Prediction for End-Use Quality Traits in Winter Wheat</span>
+                    </li>
+                    <ul style="column-count: 2;">
+                        <li style="margin-bottom: 20px;">
+                            <a href="#" style="margin-left: 0;font-size: 1.15em;">Google</a>
+                        </li>
+                        <li style="margin-bottom: 20px;">
+                            <a href="#" style="margin-left: 0;font-size: 1.15em;">Quora</a>
+                        </li>
+                        <li style="margin-bottom: 20px;">
+                            <a href="#" style="margin-left: 0;font-size: 1.15em;">ChatGPT</a>
+                        </li>
+                        <li style="margin-bottom: 20px;">
+                            <a href="#" style="margin-left: 0;font-size: 1.15em;">Wikipedia</a>
+                        </li>
+                        <li style="margin-bottom: 20px;">
+                            <a href="#" style="margin-left: 0;font-size: 1.15em;">GeeksForGeeks</a>
+                        </li>
+                        <li>
+                            <a href="#" style="margin-left: 0;font-size: 1.15em;">W3Schools</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="jumbotron text-align" style="margin-top: 2.25%;">
+                    <h2 style="margin-bottom: 25px;">Compilers used : </h2>
+                    <li style="margin-bottom: 20px;">
+                        <a href="#" style="margin-left: 0;font-size: 1.15em;">Visual Studio Code</a>
+                        <span style="font-size: 1.15em;">: Flask app and HTML Front end.</span>
+                    </li>
+                    <li>
+                        <a href="#" style="margin-left: 0;font-size: 1.15em;">Google Colab</a>
+                        <span style="font-size: 1.15em;">: Data Preprocessing and ML model.</span>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="para">&copy; 2024 Genomic Prediction for End-Use Quality Traits in Wheat. All rights reserved.</p>
+    </footer>
+</body>
+</html>

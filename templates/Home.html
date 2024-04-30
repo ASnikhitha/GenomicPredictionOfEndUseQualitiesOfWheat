@@ -1,0 +1,109 @@
+
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/Styles.css">
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/popper.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <script src="/static/Script.js"></script>
+    <title>Genomic Prediction for End-Use Quality Traits in Wheat</title>
+    <style>
+        html{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height:100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            box-sizing: inherit;
+            /* overflow-y: hidden;  */
+        }
+        .container-fluid, .row {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        footer {
+            background-color: #333; /* Dark background color for the footer */
+            color: #fff; /* Text color for the footer */
+            padding: 0.5em; /* Add padding to the footer */
+            bottom: 0;
+            padding-bottom: 0.25em;
+            text-align: center; /* Center-align the content within the footer */
+            position: static;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height: 0vh;
+            margin-top: 850px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="con">
+            <img src="/static/logo.png" alt="Logo" class="logo">
+            <h2 class="fir">Wheat End-Use Quality Trait Predictor</h2>
+        </div>
+        <div class="row opt">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('traits') }}">End-Use Quality Traits</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('index') }}">Predictions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('sources') }}">Sources</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}#ContactUs">Contact Us</a>
+            </li>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="jumbotron text-align" style="padding: 50px;padding-bottom: 30px;padding-top: 30px;">
+                    <h2 style="margin-bottom: 15px;">Wheat</h2>
+                    <p><b>Wheat is a vital staple crop in India</b>, playing a significant role in ensuring food security and contributing to the country's agricultural economy. India's diverse agro-climatic regions necessitate wheat varieties with specific traits to thrive and maximize productivity. A key focus in wheat breeding programs is <b>enhancing end-use quality traits</b>, crucial for meeting consumer and processing industry demands.</p>
+                    <p>Wheat breeding in India employs conventional and modern molecular approaches. Understanding the genetic basis of traits and using advanced breeding technologies can lead to varieties well-suited for diverse agro-ecological zones. The ongoing efforts focus not only on enhancing productivity but also on ensuring superior end-use quality for domestic and international markets.</p>
+                </div>
+                <div class="jumbotron text-align"style="padding: 50px;padding-bottom: 10px;padding-top: 30px;margin-top: 2.25%;">
+                    <h2 style="margin-bottom: 15px;">End-Use Quality Traits:</h2>
+                    <p>End-use quality traits encompass characteristics that influence the suitability of wheat for consumption and industrial processing. The Indian wheat breeding programs focus on several key agronomic and quality traits to improve overall yield, adaptability, and end-product characteristics. Among these, important end-use quality traits include <b>Days to Heading</b> (DH), <b>Grain Filling Duration</b> (GFD), <b>Grain Number per Spike</b> (GNPS), <b>Grain Weight per Spike</b> (GWPS), <b>Plant Height</b> (PH), and <b>Grain Yield</b> (GY). These traits play a crucial role in determining the adaptability of wheat varieties to different agro-climatic conditions, their growth cycle, yield potential, and the quality of harvested grains.</p>
+                        <a class="nav-link" href="{{ url_for('traits') }}" style="margin-left: 0;"><p style="color: blue;">Click to learn more about End-Use Quality Traits. --> </p></a>
+                </div>
+                <div class="jumbotron text-align"style="padding: 50px;padding-bottom: 10px;padding-top: 30px;margin-top: 2.25%;">
+                    <h2 style="margin-bottom: 15px;">Multi-Trait Multi-Environment Genomic Prediction:</h2>
+                    <p>Multi-Trait Multi-Environment Genomic Prediction is an advanced technique in wheat breeding that transforms our approach. This method evaluates various traits in different environments to forecast the performance of a particular genotype. Specifically applied to <b>end-use quality traits in wheat</b>, it enables breeders to <b>predict essential qualities</b> for both consumer satisfaction and industrial processing efficiency based on its <b>allele sequence</b>. By examining the complex interplay between genetics and diverse environments, our aim is to predict the values of end-use quality traits.</p>
+                    <a class="nav-link" href="{{ url_for('index') }}" style="margin-left: 0;"><p style="color: blue;">Click to predict values of End-Use Quality Traits of Wheat. --> </p></a>
+                </div>
+                <div class="jumbotron text-align"style="padding: 50px;padding-bottom: 10px;padding-top: 30px;margin-top: 2.25%;" id="ContactUs">
+                    <h2 style="margin-bottom: 15px;">Contact Us</h2>
+                    <p>If you have any inquiries or need assistance, feel free to reach out to us using the following contact information:</p>
+                    <p><b>Email : </b><a href="mailto:predictendusequalitytraits@gmail.com">predictendusequalitytraits@gmail.com</a></p>
+                    <p><b>Address : </b>KMIT, Hyderabad</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="para">&copy; 2024 Genomic Prediction for End-Use Quality Traits in Wheat. All rights reserved.</p>
+    </footer>
+</body>
+</html>
